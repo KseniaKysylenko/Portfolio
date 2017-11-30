@@ -7,7 +7,20 @@ $(window).on('load', function () {
     $('#preloader').delay(1000).fadeOut('slow');
 });
 
+$(function() {
+    $(window).scroll(function(){
+        if($(this).scrollTop() != 0){
+            $('#top').fadeIn();
+        }else {
+            $('#top').fadeOut();
+        }
+    });
+    $('#top').on('click', function () {
+        $('body, html').animate({
+            scrollTop:0}, 800);
 
+    });
+});
 
 
 $(document).ready(function(){
@@ -80,5 +93,4 @@ $(document).ready(function(){
                 .end().filter("[href='#"+id+"']").parent().addClass("active");
         }
     });
-
 });

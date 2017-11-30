@@ -9,13 +9,13 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #443e33;
+  background-color: #311620;
   z-index: 99; }
   #preloader .svg_anm {
     position: absolute;
-    width: 95px;
-    height: 100px;
-    background: url(../img/preloader.svg) center center no-repeat;
+    width: 60px;
+    height: 60px;
+    background: url(../img/preloader.gif) center center no-repeat;
     background-size: 100% 100%;
     left: 50%;
     top: 50%;
@@ -208,7 +208,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 34%; }
+        width: 44%; }
         .main-block #summary .experience .study em, .main-block #summary .experience .work em {
           font-size: 40px;
           margin-bottom: 30px; }
@@ -274,6 +274,14 @@ body {
         justify-content: center; }
         .main-block #contacts .contacts-block .block-contacts-item .contacts-item a {
           color: #ffbd5d; }
+
+#top {
+  position: fixed;
+  z-index: 11;
+  right: 25px;
+  bottom: 90px;
+  cursor: pointer;
+  display: none; }
 
 footer {
   position: relative;
