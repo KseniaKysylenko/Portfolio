@@ -1,16 +1,33 @@
-
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Lobster|Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Tangerine');
 @import url('https://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic,latin-ext');
-
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
-@import url('https://fonts.googleapis.com/css?family=Romanesco');
+//
+//@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+//@import url('https://fonts.googleapis.com/css?family=Romanesco');
 /* PARALLAX */
 
 body {
-  //font-size: 12px;
   font-family: 'Caveat', cursive;
 }
+
+#preloader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  background-color: #443e33;
+  z-index: 99;
+  .svg_anm {
+    position: absolute;
+    width: 95px;
+    height: 100px;
+    background: url(../img/preloader.svg) center center no-repeat;
+    background-size: 100% 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 
 #nonparallax {
   background-image: url('../img/keyart-mobile-1.JPG');
@@ -270,7 +287,6 @@ body {
           margin-bottom: 30px;
           img {
             margin-bottom: 10px;
-            height: 300px;
             width: 100%;
             border-radius: 10px;
             box-shadow: #3e333373 2px 2px 4px 3px;
@@ -330,6 +346,9 @@ body {
         padding-top: 15%;
         opacity: 0;
         transition: all .5s;
+         p {
+           font-size: 22px;
+         }
       }
     }
   }
@@ -389,20 +408,18 @@ footer {
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .main-block #portfolio .photo-work img{
     height: 300px;
   }
 
 }
 
-@media (max-width: 992px) {
-
-}
-
 @media (max-width: 768px) {
-
-
+  .main-block #portfolio .photo-work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 575px) {
@@ -411,14 +428,15 @@ footer {
 }
 
 
-@media (max-width: 600px){
-  #nonparallax {
-    display: block;
-  }
-  #parallax {
-    display: none;
-  }
-}
+//@media (max-width: 600px){
+//  #nonparallax {
+//    display: block;
+//  }
+//  #parallax {
+//    display: none;
+//  }
+//}
+
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
   #keyart-0 {
     background-image: url('../img/parallax0.png');

@@ -2,6 +2,14 @@
  * Created by Ksenya on 17.11.2017.
  */
 
+
+$(window).on('load', function () {
+    $('#preloader').delay(1000).fadeOut('slow');
+});
+
+
+
+
 $(document).ready(function(){
 
     function castParallax() {

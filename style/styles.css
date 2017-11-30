@@ -1,11 +1,25 @@
-@import url("https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Lobster|Pacifico");
-@import url("https://fonts.googleapis.com/css?family=Tangerine");
 @import url("https://fonts.googleapis.com/css?family=Caveat:400,700&subset=cyrillic,latin-ext");
-@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
-@import url("https://fonts.googleapis.com/css?family=Romanesco");
 /* PARALLAX */
 body {
   font-family: 'Caveat', cursive; }
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #443e33;
+  z-index: 99; }
+  #preloader .svg_anm {
+    position: absolute;
+    width: 95px;
+    height: 100px;
+    background: url(../img/preloader.svg) center center no-repeat;
+    background-size: 100% 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
 
 #nonparallax {
   background-image: url("../img/keyart-mobile-1.JPG");
@@ -202,7 +216,6 @@ body {
           margin-bottom: 30px; }
           .main-block #summary .experience .study figure img, .main-block #summary .experience .work figure img, .main-block #summary .experience .study #about-you figure .about-you-photo .curtain, .main-block #about-you #summary .experience .study figure .about-you-photo .curtain, .main-block #summary .experience .work #about-you figure .about-you-photo .curtain, .main-block #about-you #summary .experience .work figure .about-you-photo .curtain {
             margin-bottom: 10px;
-            height: 300px;
             width: 100%;
             border-radius: 10px;
             box-shadow: #3e333373 2px 2px 4px 3px; }
@@ -243,6 +256,8 @@ body {
         padding-top: 15%;
         opacity: 0;
         transition: all .5s; }
+        .main-block #portfolio .block-work .text-hover p {
+          font-size: 22px; }
   .main-block #contacts {
     margin-bottom: 0; }
     .main-block #contacts .contacts-block .block-contacts-item {
@@ -276,15 +291,13 @@ footer {
       color: #d4bebe;
       padding: 0 20px; }
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .main-block #portfolio .photo-work img, .main-block #portfolio .photo-work #about-you figure .about-you-photo .curtain, .main-block #about-you figure .about-you-photo #portfolio .photo-work .curtain {
     height: 300px; } }
-@media (max-width: 600px) {
-  #nonparallax {
-    display: block; }
-
-  #parallax {
-    display: none; } }
+@media (max-width: 768px) {
+  .main-block #portfolio .photo-work {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); } }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   #keyart-0 {
     background-image: url("../img/parallax0.png");
