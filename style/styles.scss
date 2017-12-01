@@ -32,11 +32,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto 100%;
   display: none;
-  .parallax-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
 }
 .keyart, .keyart_layer {
   height: 1000px;
@@ -57,10 +53,12 @@ body {
   background-repeat: repeat-x;
   width: 100%;
   position: absolute;
+  &.parallax {
+    position: fixed;
+  }
 }
-.keyart_layer.parallax {
-  position: fixed;
-}
+
+
 #keyart-0 {
   background-image: url('../img/parallax0.png');
   background-color: #ffaf1b;
@@ -409,7 +407,7 @@ footer {
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .main-block #portfolio .photo-work img{
     height: 300px;
   }
@@ -417,23 +415,46 @@ footer {
 }
 @media (max-width: 992px) {
 
+  .main-block #portfolio .photo-work {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-block #about-you figure {
+    figcaption {
+      margin-top: 0;
+      font-size: 25px;
+    }
+  }
+
+
+
 }
 
 
 @media (max-width: 768px) {
 
+  .main-block #about-you figure{
+    flex-direction: column;
+    figcaption {
+      padding-left: 0;
+      margin-top: 20px;
+      font-size: 22px;
+    }
+  }
 
-  .main-block #portfolio .photo-work {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .main-block #summary .experience {
+    flex-direction: column;
+    padding: 0 10px;
+    .study {
+      width: 100%;
+    }
+    .work ol {
+      font-size: 20px;
+    }
   }
-  .main-block #about-you figure {
-     flex-direction: column;
-  }
-  .main-block #about-you figure figcaption {
-    padding-left: 0;
-  }
+
 }
+
+
 
 @media (max-width: 575px) {
   .keyart, .keyart_layer {
@@ -454,20 +475,9 @@ footer {
     font-size: 30px;
   }
 
-  .main-block #about-you figure figcaption {
-    font-size: 22px;
-    margin-top: 20px;
-  }
-  .main-block #summary .experience {
-    flex-direction: column;
-    padding: 0 10px;
-    .study {
-      width: 100%;
-    }
-    .work ol {
-      font-size: 18px;
-    }
-  }
+  //.main-block #about-you figure figcaption {
+  //  font-size: 22px;
+  //}
 
   .main-block #portfolio {
     font-size: 24px;
@@ -550,4 +560,4 @@ footer {
 //    background-image: url('../img/parallax8.png');
 //  }
 //}
-
+//
