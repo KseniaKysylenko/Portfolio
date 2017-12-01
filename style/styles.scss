@@ -27,7 +27,7 @@ body {
 
 
 #nonparallax {
-  background-image: url('../img/keyart-mobile-1.JPG');
+  background-image: url('../img/keyart-mobile-1.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -36,7 +36,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/parallax-text.PNG');
   }
 }
 .keyart, .keyart_layer {
@@ -416,15 +415,106 @@ footer {
   }
 
 }
+@media (max-width: 992px) {
+
+}
+
 
 @media (max-width: 768px) {
+
+
   .main-block #portfolio .photo-work {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .main-block #about-you figure {
+     flex-direction: column;
+  }
+  .main-block #about-you figure figcaption {
+    padding-left: 0;
+  }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
+  .keyart, .keyart_layer {
+    height: 730px;
+  }
+  #wrap #parallax {
+    display: none;
+  }
+  #wrap #nonparallax {
+    display: block;
+  }
+  #top-menu li {
+    font-size: 11px;
+  }
+  h1,
+  .main-block #summary p,
+  .main-block #summary .experience .study em {
+    font-size: 30px;
+  }
+
+  .main-block #about-you figure figcaption {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .main-block #summary .experience {
+    flex-direction: column;
+    padding: 0 10px;
+    .study {
+      width: 100%;
+    }
+    .work ol {
+      font-size: 18px;
+    }
+  }
+
+  .main-block #portfolio {
+    font-size: 24px;
+    .photo-work {
+      grid-template-columns: repeat(1, 1fr);
+      img {
+        height: 250px;
+      }
+      .text-hover {
+        h3, p {
+          font-size: 20px;
+        }
+      }
+
+      .block-work:hover .text-hover {
+        padding-top: 30px;
+      }
+
+    }
+
+  }
+
+  .main-block #contacts .contacts-block .block-contacts-item {
+    font-size: 23px;
+  }
+  footer {
+    line-height: 40px;
+    .footer-block {
+      flex-direction: column;
+      p {
+        font-size: 20px;
+        margin: 0;
+      }
+    }
+  }
+
+  #top {
+    right: 6px;
+    bottom: 74px;
+    img {
+      width: 40px;
+      height: 100px;
+    }
+
+  }
+
+
 
 }
 
